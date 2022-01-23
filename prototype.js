@@ -18,5 +18,5 @@ objA.z = 10; //не переименовывает ранее существую
 console.log(`objA.z`, objA.z)  //10 а не 5
 
 //поиск собственного свойства на объекте
-console.log(objA.hasOwnProperty('x')) //true
-console.log(objA.hasOwnProperty('y')) //false
+console.log(objA.hasOwnProperty('x')); //true
+console.log(objA.hasOwnProperty('y')); //false
