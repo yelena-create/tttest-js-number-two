@@ -88,4 +88,53 @@ console.log(`mango.email:`, mango.email);
      };
     console.dir(User);
     User.logInfo(mango);
-}
+};
+
+// ----------- НОВЫЙ СИНТАКСИС!!!! -------------
+/**КЛАССЫ
+ * - объявление
+ * - конструктор
+ * - методы
+ * - static
+ * - приватные свойства
+ * - синтаксис публичных свойств и методы классов
+ * - геттеры и сеттеры
+ */
+{ //создание объекта 
+    class Car { 
+        static description = 'класс описывающий автомобиль';
+        
+        constructor({ brand, model, price } = {}) { 
+            console.log(this);
+            this.brand = brand;
+            this.model = model;
+            this.price = price;
+        }
+       /**вместо 
+        *  Car.prototype.changPrice = function (newPrice) {
+        this.price = newPrice; };   *  внутри класса, после конструктора */  
+        changePrice(newPrice) {
+            this.price = newPrice;
+        }
+        updateModel(newModel) {
+            this.model = newModel;
+         }
+    }
+    //собственное свойство класса, не доступное экземплярам
+    // Car.aaa = 123,   так писать не нужно, пишем через static, сразу под классом
+    console.dir(Car);
+    //создание экземпляра
+    const carInstance = new Car({
+        brand: 'Audi',
+        model: 'Q3',
+        price: 55000,
+    });
+    
+    carInstance.changePrice('65500');
+    carInstance.updateModel('Zaporogetc');
+    console.log(carInstance);
+    console.log(Object.getPrototypeOf(carInstance)===Car.prototype); //получение прототипа
+
+
+
+};
