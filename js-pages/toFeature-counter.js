@@ -1,3 +1,4 @@
+    // сам находит и привязывает элементы, которые ему нужны >
 const CounterPlugin = function ({
     rootSelector,
     initialValue = 0,

@@ -7,14 +7,39 @@
     <title>Document</title>
   </head>
   <body>
-    <script type="module">
-      document.querySelector('.hero-image');
-      imageEl.src =
-        'https://images.pexels.com/photos/1870376/pexel-photo-1870376.jpeg?auto-compress&cs=tinysrgb&dpr=2&w=480';
-      imageEl.alt = 'Это новый котик';
+    <p><a href="../index.html">на главную</a></p>
 
-      const heroTitleEl = document.querySelector('.hero__title');
-      heroTitleEl.textContent = 'Я сладкий пирожочек!';
+    <button type="button" class="magic-btn js-magic-btn">сделать магию</button>
+    <section class="hero">
+      <h1 class="hero__title">все про меня</h1>
+      <img
+        class="hero__image"
+        src="https://images.pexels.com/photos/57416/cat-sweet-kitty-animals-57416.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=480"
+        alt="it`s me"
+        width="320"
+      />
+    </section>
+
+    <br />
+
+    <input type="text" class="js-input" />
+
+    <br />
+
+    <div class="js-actions">
+      <button type="button" data-action="add">Создать</button>
+      <button type="button" data-action="remove">Удалить</button>
+      <button type="button" data-action="edit">Редактировать</button>
+    </div>
+
+    <script type="module" src="/js-pages/kitty.js">
+      // document.querySelector('.hero-image');
+      // imageEl.src =
+      //   'https://images.pexels.com/photos/1870376/pexel-photo-1870376.jpeg?auto-compress&cs=tinysrgb&dpr=2&w=480';
+      // imageEl.alt = 'Это новый котик';
+
+      // const heroTitleEl = document.querySelector('.hero__title');
+      // heroTitleEl.textContent = 'Я сладкий пирожочек!';
     </script>
   </body>
 </html>
